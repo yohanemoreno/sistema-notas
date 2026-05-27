@@ -14,12 +14,33 @@ int qtdAlunos;
 float notas[20][5];
 float media[20];
 int qtdDisciplinas;
+int opcaoInicial;
 
 
 //Processamento
 
 //LEITURA DE ALUNOS ( Commit 1)
 cout << "=== SISTEMA DE NOTAS v4.0 ====" << endl;
+cout << "1 - Novo Relatório" << endl;
+cout << "2 - Ver relatório salvo" << endl;
+cout << "Escolha uma opção: " << endl;
+cin >> opcaoInicial;
+
+// LEITURA DE ARQUIVO ( Commit 5)
+if (opcaoInicial == 2) {
+    ifstream leitura("relatorio.txt");
+    if (leitura.is_open()) {
+        string linha;
+        cout << "\n";
+        while (getline(leitura, linha)) {
+            cout << linha << endl;
+        } 
+        leitura.close();
+    } else {
+        cout << "Nenhum relatório encontrado." << endl;
+    }
+    return 0;
+}
 
 do {
     cout << "Quantidade de alunos (1 a 20): ";
