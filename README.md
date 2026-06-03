@@ -35,7 +35,8 @@ O ciclo de desenvolvimento do código foi documentado através de marcações de
 
 - **Commit 1:** Implementação da leitura e validação dos dados dos alunos.
 - **Commit 2:** Adição da lógica de captura de notas por disciplina e cálculo de médias.
-- **Commit 3:** Criação da lógica de classificação (Aprovado/Recuperação/Reprovado), exibição do resumo estatístico e implementação da persistência (gravação no arquivo `relatorio.txt`).
+- **Commit 3:** Criação da lógica de classificação (Aprovado/Recuperação/Reprovado), exibição do resumo estatístico 
+- **Commit 4:** Integração do sistema de persistência para exportar dados no arquivo `relatorio.txt´. 
 - **Commit 5:** Implementação da funcionalidade de leitura e exibição do arquivo gravado através do menu inicial.
 
 ---
