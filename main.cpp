@@ -21,6 +21,8 @@ int opcaoInicial;
 
 //LEITURA DE ALUNOS ( Commit 1)
 cout << "=== SISTEMA DE NOTAS v4.0 ====" << endl;
+cout << "Desenvolvido por: Yohane" << endl;
+cout << "Turma: LOPAL 2026 - SENAI-SP" << endl;
 cout << "1 - Novo Relatório" << endl;
 cout << "2 - Ver relatório salvo" << endl;
 cout << "Escolha uma opção: " << endl;
@@ -87,6 +89,7 @@ for (int i = 0; i <qtdAlunos; i++) {
     cout << nomes[i] << " - Media: " << media[i] << " - ";
     if (media[i] >=7 ) {
         cout << "Aprovado" << endl;
+        aprovados++;
     } else if (media[i] >=5) {
         cout << "Recuperação" << endl;
         recuperacao++;
