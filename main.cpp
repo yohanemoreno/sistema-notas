@@ -2,6 +2,7 @@
 #include <string>
 #include <windows.h>
 #include <fstream>
+#include <ctime>
 
 using namespace std;
 
@@ -43,6 +44,7 @@ if (opcaoInicial == 2) {
     }
     return 0;
 }
+        
 
 do {
     cout << "Quantidade de alunos (1 a 20): ";
@@ -107,6 +109,9 @@ for (int i = 0; i <qtdAlunos; i++) {
 
     if (arquivo.is_open()) {
         arquivo << "=== RELATÓRIO ====" << endl;
+        time_t agora = time(0);
+        char* dataHora = ctime(&agora);
+        arquivo << "Data do relatorio: " << dataHora << endl;
         for(int i = 0; i < qtdAlunos; i++) {
             arquivo << nomes[i] << " - Média:" << media[i] << " - ";
             if (media[i] >= 7) {
