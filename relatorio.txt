@@ -1,4 +1,11 @@
 === RELATÓRIO ====
-yoh - Média:10 - Aprovado
+Data do relatorio: Wed Jun 03 08:54:58 2026
 
-Resumo: 0 aprovados, 0 em recuperação, 0 reprovados.
+yoh - Média:8.5 - Aprovado
+helo - Média:8.5 - Aprovado
+luis - Média:4 - Reprovado
+
+Maior media: yoh (8.5)
+Menor media: luis (4)
+
+Resumo: 2 aprovados, 0 em recuperação, 1 reprovados.

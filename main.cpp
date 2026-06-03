@@ -87,6 +87,9 @@ for (int i = 0; i < qtdAlunos; i++) {
 cout << "\n=== RELATÓRIO ===" << endl;
 int aprovados = 0, recuperacao = 0, reprovados = 0;
 
+int indiceMaior = 0;
+int indiceMenor = 0;
+
 for (int i = 0; i <qtdAlunos; i++) {
     cout << nomes[i] << " - Media: " << media[i] << " - ";
     if (media[i] >=7 ) {
@@ -101,7 +104,16 @@ for (int i = 0; i <qtdAlunos; i++) {
       cout << "Reprovado" << endl;
     reprovados++;
     }
+
+    if (media[i] > media[indiceMaior]){
+        indiceMaior = i;
+    }
+    if (media[i] < media[indiceMenor]) {
+        indiceMenor = i;
+    }
 }
+    cout << "\nMaior media: " << nomes[indiceMaior] << " (" << media[indiceMaior] << ")" << endl;
+    cout << "Menor media: " << nomes[indiceMenor] << " (" << media[indiceMenor] << ")" << endl;
     cout << "\nResumo: " << aprovados << " aprovados. " << recuperacao << " em recuperação, " << reprovados << " reprovados." << endl;
     
     // SALVAR EM ARQUIVO ( Commit 3)
@@ -122,6 +134,9 @@ for (int i = 0; i <qtdAlunos; i++) {
                 arquivo << "Reprovado" << endl;
             }
         }
+        
+        arquivo << "\nMaior media: " << nomes[indiceMaior] << " (" << media[indiceMaior] << ")" << endl;
+        arquivo << "Menor media: " << nomes[indiceMenor] << " (" << media[indiceMenor] << ")" << endl;
         arquivo << "\nResumo: " << aprovados << " aprovados, " << recuperacao << " em recuperação, " << reprovados << " reprovados." << endl;
 
         arquivo.close();
